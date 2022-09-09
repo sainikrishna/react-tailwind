@@ -1,9 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background: #F2F2F2
 }
 
 a {
@@ -23,4 +28,64 @@ a {
     color: white;
     background: black;
   }
+}
+
+.neumorphic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 10px;
+  padding: 8px 35px;
+  position: relative;
+   box-shadow:
+   -7px -7px 20px 0px #fff9,
+   -4px -4px 5px 0px #fff9,
+   7px 7px 20px 0px #0002,
+   4px 4px 5px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,
+   inset 0px 0px 0px 0px #0001,
+   inset 0px 0px 0px 0px #fff9,        inset 0px 0px 0px 0px #0001;
+ transition:box-shadow 0.6s cubic-bezier(.79,.21,.06,.81);
+   border-radius: 100px;
+   color: #6e6e6e;
+   font-size: 12px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.text-gray {
+  color: #595959;
+}
+
+.text-gray-light {
+  color: #b6b6b6;
+}
+
+.text-silver {
+  color: silver
+}
+
+.h-115 {
+  height: 28.75rem;
+}
+
+.text-52 {
+  font-size: 52px;
+}
+
+.video {
+  background-image:url("https://uploads-ssl.webflow.com/60cbc0da55451be74897d8d4/60db8a04d4f97c4f066bbe11_HeroAnim3000px_h264_6Kkbps-poster-00001.jpg");
+  position: absolute;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
 }
