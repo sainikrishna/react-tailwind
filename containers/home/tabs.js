@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Section from "../../components/section";
 
 const tabs = [
     {
@@ -38,21 +39,21 @@ export default function Tabs(){
 
     const data = tabs[active];
 
-    return <section className="mt-16 px-20 pb-28 border-b border-b-gray-600">
-        <div className="mb-14 flex justify-between mb-14">
+    return <Section className="mt-16 pb-10 md:pb-28 border-b border-b-gray-600">
+        <div className="mb-6 md:mb-14 flex justify-between">
             {tabs.map((tab, index) => (
-                <div onClick={() => setActive(index)} key={tab} className={`${index === active ? "text-gray" : "text-gray-light"} text-lg font-normal border-b border-b-gray-300 pb-2.5 pt-7 flex-1 text-center mr-7 cursor-pointer last:mr-0`}>{tab.name}</div>
+                <div onClick={() => setActive(index)} key={tab} className={`${index === active ? "text-gray" : "text-gray-light"} md:text-lg font-normal border-b border-b-gray-300 pb-2.5 pt-7 flex-1 text-center mr-7 cursor-pointer last:mr-0`}>{tab.name}</div>
             ))}
             
         </div>
-        <div className="flex justify-between">
-                <div className="flex-1 mr-6">
-                    <img src={data.image} className="h-96 rounded" />
+        <div className="md:flex justify-between">
+                <div className="flex-1 md:mr-6 flex justify-center">
+                    <img src={data.image} className="h-56 md:h-96 rounded" />
                 </div>
-                <div className="flex-1 pl-14 pr-32">
-                    <div className="text-gray text-5xl mb-5">{data.title}</div>
-                    <div className="text-gray-light text-xl">{data.description}</div>
+                <div className="flex-1 md:pl-14 md:pr-32">
+                    <div className="text-gray text-3xl md:text-5xl mb-5 mt-4 md:mt-0">{data.title}</div>
+                    <div className="text-gray-light text-lg md:text-xl">{data.description}</div>
                 </div>
         </div>
-    </section>
+    </Section>
 }
