@@ -10,7 +10,17 @@ module.exports = {
       backgroundImage: {
         'join-us': "url('/images/join-us.png')",
       }
+    },
+    extend: {
+      colors: {
+        test: '#1fb6ff',
+        gray: {
+          100: '#f7fafc',
+          900: '#1a202c',
+        }
+      }
     }
+    
   },
   plugins: [],
 }

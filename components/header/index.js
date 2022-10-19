@@ -3,8 +3,8 @@ import Section from "../section";
 
 export default function Header(props){
     return <Section className="py-5 flex justify-between">
-        <img src="https://uploads-ssl.webflow.com/622f0adc088d28dd47af1002/622f0adc088d28334daf101a_MoS-Logo.svg" className="h-8 md:h-10 z-20 cursor-pointer"/>
-        <div className="flex items-center z-20">
+        <img src="https://uploads-ssl.webflow.com/622f0adc088d28dd47af1002/622f0adc088d28334daf101a_MoS-Logo.svg" className="h-8 md:h-10 z-10 cursor-pointer"/>
+        <div className="flex items-center z-10">
             <div className="hidden md:block">
                 <Button>
                     Download
